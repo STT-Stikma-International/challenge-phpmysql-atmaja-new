@@ -43,7 +43,8 @@ $conn->close();
 
 
 //TODO: SELECT data mahasiswa
-
+$sql = "SELECT nama, nim, kelas, email FROM mahasiswa";
+$result = $conn-> query($sql)
 // ---
 if ($result->num_rows > 0) {
 
@@ -96,7 +97,8 @@ $conn->close();
 
 
 //TODO: UPDATE DATA MAHASISWA
-
+$sql = "UPDATE mahasiswa
+SET nama = 'ricoceper' WHERE id = 1";
 //---
 if ($conn->query($sql) === TRUE) {
     echo "Data berhasil diupdate";
